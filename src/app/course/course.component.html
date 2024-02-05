@@ -1,0 +1,34 @@
+
+
+{{title}}
+
+<hr>
+
+<p [ngClass] = "['color1' ]"> My Pets Name:</p>
+
+<div *ngFor = "let pet of Pets" >
+    <div [ngStyle]="{'color':pet.Age>12? 'red':'green'}">
+
+        {{pet.Name}} and my age was {{pet.Age}}
+
+    </div>
+</div>
+<input type="radio" name="radio1" (click)="Onchange(true)">True
+<input type="radio" name="radio1" (click)="Onchange(false)">False
+
+<hr>
+
+<div *ngIf="IsVisible ; then thenBlock ; else elseBlock"></div>
+
+
+<ng-template #thenBlock>
+  This is True Radio button clicked -- then block
+</ng-template>
+
+<ng-template #elseBlock>
+    This is False Radio button clicked -- else block
+</ng-template>
+
+
+
+
