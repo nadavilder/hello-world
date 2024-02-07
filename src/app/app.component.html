@@ -1,4 +1,14 @@
-
-<div>This is Course Component</div> 
+{{title}}
 <br>
-<app-course/>
+<div>
+    <a [routerLink]=" ['/course']"> Course</a> ||
+    <a [routerLink]=" ['/admin']"> Admin</a>
+</div>
+<br>
+
+<button (click)="DynamicRouter('admin')"> Go to Admin page </button>
+
+<p style="color:blue">{{displayMsg}}</p>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<router-outlet></router-outlet>

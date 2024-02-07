@@ -13,22 +13,32 @@
 
     </div>
 </div>
-<input type="radio" name="radio1" (click)="Onchange(true)">True
+
+<input type="radio" name="radio1" (click)="Onchange(true)" checked="checked">True
 <input type="radio" name="radio1" (click)="Onchange(false)">False
+<hr>
+<div *ngIf="IsVisible ; then thenBlock ; else elseBlock"></div>
+<div>
+    <ng-template #thenBlock>
+      This is True Radio button clicked -- then block
+    </ng-template>
+</div>
+<div>
+    <ng-template #elseBlock>
+        This is False Radio button clicked -- else block
+    </ng-template>
+</div>
+<hr>
+<div>
+    Enter Name : <input [value] = 'name1' (input) = 'name1 = $any($event.target).value'><br/>
+    Your updated name is <p style="color: red;">{{name1 | fisrtLetterToUpper}}</p>
+</div>
 
 <hr>
+<div>
 
-<div *ngIf="IsVisible ; then thenBlock ; else elseBlock"></div>
-
-
-<ng-template #thenBlock>
-  This is True Radio button clicked -- then block
-</ng-template>
-
-<ng-template #elseBlock>
-    This is False Radio button clicked -- else block
-</ng-template>
-
-
+    Your updated name is using ngModel <p style="color: red;">{{name2}}</p>
+    <input [(ngModel)] ='name2'>
+</div>
 
 

@@ -1,0 +1,12 @@
+[
+    {
+      "userId": 1,
+      "firstName": "Nadav",
+      "lastName": "Vilder",
+      "phoneNumber": "12345678",
+      "emailAddress": "nadav@gmail.com",
+      "Age":"29",
+      "Gender":"Male",
+      "Images":"../assets/Images/me.jpg"
+    }
+]

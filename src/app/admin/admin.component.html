@@ -1,0 +1,24 @@
+
+<div *ngFor="let item of MyInfo ;let i= index">
+    <h3>{{item.firstName}} {{item.lastName}}</h3>
+    <img src="{{item.Images}}" />
+   </div>
+
+   <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Number</mat-label>
+      <input type="text"
+             placeholder="Pick one"
+             aria-label="Number"
+             matInput
+             [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption="one" #auto="matAutocomplete">
+        
+          <mat-option value="one">one</mat-option>
+          <mat-option  value="two">two</mat-option>
+          <mat-option  value="three">three</mat-option>
+
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  
